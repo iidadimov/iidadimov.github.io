@@ -330,10 +330,8 @@ html, body {
 
 /* Footer tyylit */
 .footer {
-    background-color: #F1D1DE;
-    text-align: center;
-    padding: 10px 0;
-    width: 100vw;
+    max-width: none;
+    margin: 0 auto;
 }
 
 #back-to-top {
