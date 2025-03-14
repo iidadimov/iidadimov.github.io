@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,300;1,300&display=swap');
+
 /* Oletustyylit, reset */
 * {
     margin: 0;
@@ -34,7 +36,7 @@ header {
 h1 {
     font-size: 36px;
     font-family: 'Abril Fatface', serif;
-    position: center;
+    text-align: center; /* Korjattu */
 }
 
 nav {
@@ -89,7 +91,7 @@ nav {
 /* Takaisin ylös -nappula */
 .scroll-to-top {
     display: none;
-    position: center;
+    position: fixed; /* Korjattu */
     bottom: 20px;
     right: 20px;
     padding: 0.5rem 1rem;
@@ -127,8 +129,6 @@ nav {
     display: flex;
     align-items: center;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,300;1,300&display=swap');
 
 body {
     font-family: 'Lato', sans-serif;
