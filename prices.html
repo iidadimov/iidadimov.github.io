@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinnasto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     
+        .content ul li {
+            margin-bottom: 10px; /* Add spacing between list items */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+        .content ul li p {
+            display: inline; /* Keep paragraph inline to maintain list marker on each line */
+            margin: 0; /* Remove default margin */
+        }
+        #back-to-top {
+            color: black; /* Set text color to black */
+            text-decoration: none; /* Remove underline */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div id="inner-header">
+            <nav class="nav-bar">
+                <h1 class="center-text">Iida Dimov</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="about.html">Minusta</a></li>
+                    <li><a href="gallery.html">Galleria</a></li>
+                    <li><a href="prices.html">Hinnasto</a></li>
+                    <li><a href="contact.html">Ota yhteyttä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <section>
+            <h2>Hinnasto</h2>
+            <div class="sisältö">
+                <div class="content-wrapper">
+                    <ul>
+                        <li><p>45 min kuvausaika, sis. 20 kuvaa: 150 €</p></li>
+                        <li><p>Juhlakuvaus 4 tuntia, sis. 100 kuvaa: 400 €</p></li>
+                        <li><p>Matkakulut sopimuksen mukaan. </p></li>
+                    </ul>
+                </section>
+            </main>
+            <script src="scripts.js"></script>
+            <footer class="footer" role="contentinfo">
+                <div id="inner-footer">
+                    <a id="back-to-top" href="#">Takaisin ylös</a>
+                </div>
+            </footer>
+        </body>
+        </html>
+        

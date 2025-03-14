@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iida Dimov</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="Valokuvaaja">
+    <meta name="description" content="Valokuvaajaa etsivälle">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center-align all content horizontally */
+            margin: 0;
+            padding: 0;
+            width: 100%; /* Ensure body spans full width */
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Max width for the content */
+            padding: 20px;
+        }
+        .sisältö {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .kuva {
+            max-width: 100%;
+            height: auto;
+        }
+        .teksti {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .nav-links li {
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+        }
+        footer {
+            width: 100%; /* Ensure footer spans full width */
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #back-to-top {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div id="inner-header">
+            <nav class="nav-bar">
+                <h1 class="center-text">Iida Dimov</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="about.html">Minusta</a></li>
+                    <li><a href="gallery.html">Galleria</a></li>
+                    <li><a href="prices.html">Hinnasto</a></li>
+                    <li><a href="contact.html">Ota yhteyttä</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="content">
+        <main>
+            <div class="h1-sisältö"></div>
+            <hr>
+            <br>
+
+            <div class="sisältö">
+                <div class="content-wrapper">
+                    <img class="kuva" src="lidia.jpeg" alt="Lidia">
+                    <div class="teksti">
+                        <p>Ikuistan hetken ja sinut, sellaisena kuin olet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sisältö">
+                <div class="content-wrapper">
+                    <div class="teksti">
+                        <p>Rennosti ja sopivan kotikutoisesti, arkisen ihanasti.</p>
+                    </div>
+                    <img class="kuva" src="maha.jpeg" alt="Maha">
+                </div>
+            </div>
+
+            <div class="sisältö">
+                <div class="content-wrapper">
+                    <img class="kuva" src="perhe.jpeg" alt="Perhe">
+                    <div class="teksti">
+                        <p>Sinulle tutussa ja turvallisessa ympäristössä.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div id="inner-footer">
+                <a id="back-to-top" href="#">Takaisin ylös</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
