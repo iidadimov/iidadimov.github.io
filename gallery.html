@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galleria</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <!-- Preload fontit -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Sivun alkuun lisätty ankkuri -->
+    <div id="top"></div>
+    
     <header class="header">
         <div id="inner-header">
             <nav class="nav-bar">
@@ -33,28 +41,77 @@
                 <article>
                     <h3>Perhe</h3>
                     <div class="image-grid">
-                        <img src="perhe.jpeg" alt="Perhe 1">
-                        <img src="perhe2.JPEG" alt="Perhe 2">
-                        <img src="perhe3.JPEG" alt="Perhe 3">
-                        <img src="perhe4.JPEG" alt="Perhe 4">
+                        <!-- Modernit kuvamuodot ja eksplisiittiset mitat -->
+                        <picture>
+                            <source srcset="perhe.webp" type="image/webp">
+                            <source srcset="perhe.jpeg" type="image/jpeg">
+                            <img src="perhe.jpeg" alt="Perhe 1" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="perhe2.webp" type="image/webp">
+                            <source srcset="perhe2.JPEG" type="image/jpeg">
+                            <img src="perhe2.JPEG" alt="Perhe 2" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="perhe3.webp" type="image/webp">
+                            <source srcset="perhe3.JPEG" type="image/jpeg">
+                            <img src="perhe3.JPEG" alt="Perhe 3" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="perhe4.webp" type="image/webp">
+                            <source srcset="perhe4.JPEG" type="image/jpeg">
+                            <img src="perhe4.JPEG" alt="Perhe 4" width="600" height="400">
+                        </picture>
                     </div>
                 </article>
                 <article>
                     <h3>Soolo</h3>
                     <div class="image-grid">
-                        <img src="lidia.jpeg" alt="Soolo 1">
-                        <img src="soolo2.jpeg" alt="Soolo 2">             
-                        <img src="soolo3.JPEG" alt="Soolo 3">
-                        <img src="soolo4.jpg" alt="Soolo 4">
+                        <picture>
+                            <source srcset="lidia.webp" type="image/webp">
+                            <source srcset="lidia.jpeg" type="image/jpeg">
+                            <img src="lidia.jpeg" alt="Soolo 1" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="soolo2.webp" type="image/webp">
+                            <source srcset="soolo2.jpeg" type="image/jpeg">
+                            <img src="soolo2.jpeg" alt="Soolo 2" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="soolo3.webp" type="image/webp">
+                            <source srcset="soolo3.JPEG" type="image/jpeg">
+                            <img src="soolo3.JPEG" alt="Soolo 3" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="soolo4.webp" type="image/webp">
+                            <source srcset="soolo4.jpg" type="image/jpeg">
+                            <img src="soolo4.jpg" alt="Soolo 4" width="600" height="400">
+                        </picture>
                     </div>
                 </article>
                 <article>
                     <h3>Raskaus</h3>
                     <div class="image-grid">
-                        <img src="maha.jpeg" alt="Raskaus 1">
-                        <img src="maha2.JPEG" alt="Raskaus 2">
-                        <img src="maha3.JPEG" alt="Raskaus 3">
-                        <img src="maha4.JPEG" alt="Raskaus 4">
+                        <picture>
+                            <source srcset="maha.webp" type="image/webp">
+                            <source srcset="maha.jpeg" type="image/jpeg">
+                            <img src="maha.jpeg" alt="Raskaus 1" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="maha2.webp" type="image/webp">
+                            <source srcset="maha2.JPEG" type="image/jpeg">
+                            <img src="maha2.JPEG" alt="Raskaus 2" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="maha3.webp" type="image/webp">
+                            <source srcset="maha3.JPEG" type="image/jpeg">
+                            <img src="maha3.JPEG" alt="Raskaus 3" width="600" height="400">
+                        </picture>
+                        <picture>
+                            <source srcset="maha4.webp" type="image/webp">
+                            <source srcset="maha4.JPEG" type="image/jpeg">
+                            <img src="maha4.JPEG" alt="Raskaus 4" width="600" height="400">
+                        </picture>
                     </div>
                 </article>
             </div>
@@ -63,7 +120,8 @@
     <script src="scripts.js"></script>
     <footer class="footer" role="contentinfo">
         <div id="inner-footer">
-            <a id="back-to-top" href="#">Takaisin ylös</a>
+            <!-- Korjattu Takaisin ylös -linkki -->
+            <a id="back-to-top" href="#top">Takaisin ylös</a>
         </div>
     </footer>
 </body>
