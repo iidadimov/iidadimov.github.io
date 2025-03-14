@@ -1,349 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:ital,wght@0,300;1,300&display=swap');
+/* Korjaukset ja optimoinnit */
 
-/* Oletustyylit, reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Globaalit tyylit */
-body {
-    font-family: 'Lato Light', Arial, sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-align all content horizontally */
-    width: 100%; /* Ensure body spans full width */
-}
-
-/* Otsikkotyylit */
-header {
-    width: 100%; /* Full width of the page */
-    background-color: #F1D1DE; /* Same pink background color as header */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 25px 0; /* Add some padding for better visual spacing */
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-h1 {
-    font-size: 36px;
-    font-family: 'Abril Fatface', serif;
-    text-align: center; /* Korjattu */
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F1D1DE;
-    width: 100%; /* Make the navigation bar full width */
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.nav-list li {
-    margin: 0 1rem;
-}
-
-.nav-list li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-/* Kuvagalleria */
-.photo-gallery {
-    overflow-y: scroll;
-    height: 400px;
-    padding: 2rem;
-}
-
-.photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.photo-container img {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 10px;
-}
-
-/* Takaisin ylös -nappula */
-.scroll-to-top {
-    display: none;
-    position: fixed; /* Korjattu */
-    bottom: 20px;
-    right: 20px;
-    padding: 0.5rem 1rem;
-    font-size: 16px;
-    background-color: #000000;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.scroll-to-top:hover {
-    background-color: #333333;
-}
-
-/* Responsiivinen design */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-}
-
-/* Keskitetyt valokuvat vaakasuunnassa */
-.photo-container {
-    display: flex;
-    align-items: center;
-}
-
-body {
-    font-family: 'Lato', sans-serif;
-}
-
-h1 {
-    font-family: 'Abril Fatface', serif;
-}
-
+/* Kuvien eksplisiittiset mitat (vähentää layout shift -ongelmia) */
 .kuva {
-    width: 300px; 
-    height: auto; 
-    margin: 25px;
-    max-width: 100%;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.center-text {
-    margin: 0;
-}
-
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    max-width: 600px; /* Kuvan maksimi leveys */
+    height: auto; /* Säilyttää kuvasuhteen */
 }
 
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    max-width: 1200px; /* Max width for the content */
-    padding: 20px;
-}
-
-.main-content img {
-    max-width: 100%; /* Kuvan skaalautuvuus */
-    height: auto; /* Kuvasuhteen pysyminen */
-    margin-bottom: 20px; /* Tyhjä tila kuvan ympärille */
-}
-
-.main-content h2 {
-    margin: 20px 0; /* Tyhjä tila otsikon ympärillä */
-}
-
-.main-content p {
-    margin: 10px 0; /* Tyhjä tila lauseiden välissä */
-}
-
-.footer {
-    width: 100%; 
-    background-color: #F1D1DE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 0; /* Padding tekstin ympärille */
-    text-align: center;
-}
-
-.image-container {
-    display: flex;
-    flex-direction: column; /* Kuvien ja tekstien pinoaminen */
-    gap: 20px; /* Tyhjä tila tekstien välissä */
-    margin: 20px 0;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Neljä palstaa */
-    gap: 10px; /* Tyhjä tila kuvien välissä */
-}
-
-.image-grid img {
+/* Modernit kuvamuodot */
+picture img {
     width: 100%;
     height: auto;
 }
 
-/*  */
+/* Renderöinnin estävien resurssien hallinta */
+@media (min-width: 769px) {
+    body {
+        font-display: swap; /* Nopeuttaa fonttien näkyvyyttä */
+    }
+}
+
+/* Välimuistipolitiikan huomioiminen */
+html {
+    image-rendering: optimizeQuality; /* Kuvien laatu etusijalla */
+}
+
+/* Kuvien optimointi ja nykyaikaiset muodot */
+.image-grid img,
+.content-wrapper img {
+    display: block;
+    width: 100%; /* Varmistetaan kuvien hyvä skaalautuvuus */
+}
+
+/* Responsiivisuuden varmistaminen */
 @media (max-width: 768px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+
     .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Pienempään näyttöön kaksi saraketta */
     }
 }
 
 @media (max-width: 480px) {
     .image-grid {
-        grid-template-columns: 1fr; /* One column on very small screens */
+        grid-template-columns: 1fr; /* Yksi sarake erittäin pienillä näytöillä */
     }
-}
-
-h2 {
-    text-align: center;
-    font-weight: normal;
-}
-
-h3 {
-    font-weight: normal;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.content-wrapper img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.teksti {
-    max-width: 600px; /* Adjust the width as needed */
-}
-
-.content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.content-wrapper:nth-child(odd) {
-    flex-direction: row;
-}
-
-.content-wrapper:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.content-wrapper img {
-    max-width: 100%;
-    height: auto;
-    flex: 1;
-    margin: 10px;
-}
-
-.content-wrapper .teksti {
-    flex: 1;
-    margin: 10px;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-
-    .content-wrapper:nth-child(even) {
-        flex-direction: column;
-    }
-}
-
-.content-wrapper img {
-    max-width: 300px; 
-    height: auto; 
-    margin-right: 20px; 
-}
-
-.content-wrapper .text {
-    max-width: 600px; 
-}
-
-/* Sivun täyttö pystysuunnassa */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Sisällön täytettävä vapaa tila*/
-.main-content {
-    flex: 1;
-}
-
-/* Footer tyylit */
-.footer {
-    background-color: #F1D1DE;
-    text-align: center;
-    padding: 10px 0;
-    width: 100vw;
-}
-
-#back-to-top {
-    color: black; /* Asettaa tekstin värin mustaksi */
-    text-decoration: none; /* Poistaa alleviivauksen */
 }
