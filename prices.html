@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hinnasto</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <!-- Preload fontit -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <style>
+     
         .content ul li {
-            margin-bottom: 10px; /* Lisää väliä luettelon kohtien välille */
-            white-space: nowrap; /* Estää tekstin rivittymisen */
+            margin-bottom: 10px; /* Add spacing between list items */
+            white-space: nowrap; /* Prevent text from wrapping */
         }
         .content ul li p {
-            display: inline; /* Pitää kappaleet samalla rivillä luettelomerkkien kanssa */
-            margin: 0; /* Poistaa oletusmarginaalit */
+            display: inline; /* Keep paragraph inline to maintain list marker on each line */
+            margin: 0; /* Remove default margin */
         }
         #back-to-top {
-            color: black; /* Asettaa tekstin värin mustaksi */
-            text-decoration: none; /* Poistaa alleviivauksen */
+            color: black; /* Set text color to black */
+            text-decoration: none; /* Remove underline */
         }
     </style>
 </head>
 <body>
-    <!-- Sivun alkuun lisätty ankkuri -->
-    <div id="top"></div>
-
     <header class="header">
         <div id="inner-header">
             <nav class="nav-bar">
@@ -56,18 +49,16 @@
                     <ul>
                         <li><p>45 min kuvausaika, sis. 20 kuvaa: 150 €</p></li>
                         <li><p>Juhlakuvaus 4 tuntia, sis. 100 kuvaa: 400 €</p></li>
-                        <li><p>Matkakulut sopimuksen mukaan.</p></li>
+                        <li><p>Matkakulut sopimuksen mukaan. </p></li>
                     </ul>
+                </section>
+            </main>
+            <script src="scripts.js"></script>
+            <footer class="footer" role="contentinfo">
+                <div id="inner-footer">
+                    <a id="back-to-top" href="#">Takaisin ylös</a>
                 </div>
-            </div>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
-    <footer class="footer" role="contentinfo">
-        <div id="inner-footer">
-            <!-- Korjattu Takaisin ylös -linkki -->
-            <a id="back-to-top" href="#top">Takaisin ylös</a>
-        </div>
-    </footer>
-</body>
-</html>
+            </footer>
+        </body>
+        </html>
+        
